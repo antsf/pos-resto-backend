@@ -38,6 +38,14 @@
                     </li>
                 </ul> --}}
             </li>
+            <li class="nav-item {{ $type_menu === 'products' ? 'active' : '' }}">
+                <a href="{{ route('products.index') }}"
+                    class="nav-link"><i class="fas fa-cubes"></i><span>Products</span></a>
+            </li>
+            <li class="nav-item {{ $type_menu === 'categories' ? 'active' : '' }}">
+                <a href="{{ route('categories.index') }}"
+                    class="nav-link"><i class="fas fa-cube"></i><span>Categories</span></a>
+            </li>
         </ul>
     </aside>
 </div>

@@ -30,7 +30,7 @@ class UserController extends Controller
     // create
     public function create() 
     {
-        return view('pages.users.create');
+        return view('pages.users.create', ['type_menu' => 'users']);
     }
 
     // store
@@ -58,13 +58,13 @@ class UserController extends Controller
     // show
     public function show($id) 
     {
-        return view('pages.users.show');
+        return view('pages.users.show', ['type_menu' => 'users']);
     }
 
     // edit
     public function edit($id) {
         $user = User::findOrFail($id);
-        return view('pages.users.edit', compact('user'));
+        return view('pages.users.edit', ['type_menu' => 'users'], compact('user'));
     }
 
     // update
